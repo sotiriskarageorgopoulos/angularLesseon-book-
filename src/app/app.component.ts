@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from '../model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proj';
+
+  model = new Model();
+
+  getName():string{
+    return this.model.user;
+  }
+
+  getItems():string[]{
+    return this.model.items;
+  }
 }
