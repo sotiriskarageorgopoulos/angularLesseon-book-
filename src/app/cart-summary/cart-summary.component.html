@@ -1,0 +1,15 @@
+<div class="col-sm-6">
+  <small style="color:aliceblue">
+    Your Cart:
+    <span *ngIf="cart.itemCount > 0">
+      {{cart.itemCount}} item(s)
+      {{cart.cartPrice | currency:"USD":true:"2.2-2"}}
+    </span>
+    <span *ngIf="cart.itemCount == 0" style="color:aliceblue">
+      (empty)
+    </span>
+  </small>
+  <button class="btn btn-sm bg-inverse" [disabled]="cart.itemCount == 0" routerLink="/cart">
+     <i class="fa fa-shoping-cart"></i>
+  </button>
+</div>
